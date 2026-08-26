@@ -1,0 +1,32 @@
+{
+  "artifact": "h15_treasury_cmt_2000_2025.csv.gz",
+  "compressed_sha256": "910dab1695a286a242d4d8832838938dc3cbec1795d048c6eaebb14c5ae4f08e",
+  "compressed_bytes": 116854,
+  "uncompressed_sha256": "413b0d1241454a45d45d4bf258aa2fdf079eb4455602d102d4c3af710d306e13",
+  "uncompressed_bytes": 860527,
+  "rows_excluding_header": 6783,
+  "columns": 12,
+  "first_date": "2000-01-03",
+  "last_date": "2025-12-31",
+  "snapshot_created_at_utc": "2026-08-25T00:00:00+00:00",
+  "units": "percent_per_annum",
+  "source": "Board of Governors of the Federal Reserve System, H.15 Selected Interest Rates, distributed through FRED",
+  "source_urls": [
+    "https://www.federalreserve.gov/releases/h15/",
+    "https://fred.stlouisfed.org/release?rid=18"
+  ],
+  "series_ids": [
+    "DGS1MO",
+    "DGS3MO",
+    "DGS6MO",
+    "DGS1",
+    "DGS2",
+    "DGS3",
+    "DGS5",
+    "DGS7",
+    "DGS10",
+    "DGS20",
+    "DGS30"
+  ],
+  "note": "Immutable review snapshot. FRED may revise history; live runs must archive their own bytes and hash."
+}

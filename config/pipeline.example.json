@@ -1,0 +1,52 @@
+{
+  "data": {
+    "boundary_week_policy": "drop",
+    "cache_max_age_hours": 24.0,
+    "maximum_calendar_gap_days": 12,
+    "maximum_end_coverage_gap_days": 7,
+    "maximum_staleness_days": 7,
+    "maximum_start_coverage_gap_days": 7,
+    "maximum_within_week_observation_lag_days": 1,
+    "minimum_complete_weeks": 260,
+    "maximum_response_bytes": 25000000,
+    "request_timeout_seconds": 10.0,
+    "retries": 2,
+    "source_mode": "live_then_snapshot",
+    "start_date": "2000-01-01",
+    "weekly_rule": "W-FRI"
+  },
+  "forecast": {
+    "adoption_alpha": 0.05,
+    "confirmation_observations": 52,
+    "enabled": true,
+    "hac_lags": 4,
+    "interval_bootstrap_block_lengths": [4, 13, 26],
+    "interval_bootstrap_replications": 20000,
+    "interval_evaluation_observations": 260,
+    "interval_history_weeks": 260,
+    "interval_validation_alpha": 0.05,
+    "minimum_interval_observations": 104,
+    "minimum_model_selection_observations": 52,
+    "minimum_rmse_improvement": 0.01,
+    "minimum_training_weeks": 520
+  },
+  "pca": {
+    "bootstrap_block_weeks": 13,
+    "bootstrap_replications": 2000,
+    "bootstrap_sensitivity_replications": 2000,
+    "current_halflife_weeks": 52.0,
+    "maximum_current_factor_sigma_ratio_warning": 1.25,
+    "minimum_template_dominance_margin": 0.10,
+    "minimum_template_similarity": 0.70,
+    "retained_factors": 3,
+    "rolling_window_years": 5
+  },
+  "risk": {
+    "backtest_alpha": 0.05,
+    "es_confidence": 0.975,
+    "historical_window_weeks": 520,
+    "maximum_krd_asof_gap_days": 7,
+    "minimum_effective_tail_mass_review": 20.0,
+    "var_confidence": 0.99
+  }
+}
