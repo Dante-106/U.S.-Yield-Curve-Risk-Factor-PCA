@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "us-yield-curve-pca"
+version = "3.3.0"
+description = "Auditable U.S. Treasury yield-curve PCA, forecast validation, and linear key-rate risk mapping"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+authors = [{name = "Yield Curve PCA Maintainers"}]
+license = "LicenseRef-Proprietary"
+license-files = ["LICENSE"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.0,<3",
+  "scipy>=1.11,<2",
+  "matplotlib>=3.8,<4",
+  "tzdata>=2025.2",
+]
+
+[project.optional-dependencies]
+notebook = [
+  "ipykernel>=6.29,<8",
+  "ipython>=8.20,<10",
+  "jinja2>=3.1,<4",
+  "jupyter-client>=8.6,<9",
+  "nbclient>=0.10,<1",
+  "nbformat>=5.10,<6",
+]
+dev = [
+  "build>=1,<2",
+  "pytest>=8,<10",
+  "ruff>=0.9,<1",
+]
+
+[project.scripts]
+yield-curve-pca = "yield_curve_pca.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"yield_curve_pca.resources" = ["*.gz", "*.json"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 110
+exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]

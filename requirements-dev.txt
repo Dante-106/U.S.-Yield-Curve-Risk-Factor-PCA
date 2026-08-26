@@ -1,0 +1,9 @@
+-r requirements.txt
+build>=1,<2
+ipykernel>=6.29,<8
+ipython>=8.20,<10
+jinja2>=3.1,<4
+nbclient>=0.10,<1
+nbformat>=5.10,<6
+pytest>=8,<10
+ruff>=0.9,<1
